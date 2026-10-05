@@ -200,6 +200,10 @@ Pulsa **📰 Tablón**. Verás tres pestañas con el número de noticias de cada
 
 Son medios con una línea editorial propia, no cobertura neutral: conviene contrastar con otras fuentes.
 
+### Caja del Servicio Meteorológico Nacional
+
+Arriba de las pestañas hay una tarjeta fija con el enlace al Servicio Meteorológico Nacional de Argentina (https://www.smn.gob.ar/). No depende del bot ni de `news.json`: siempre está. Para cambiar el enlace o el texto, busca en `index.html` (Ctrl+F) `smn.gob.ar`.
+
 ### De dónde salen las noticias
 
 | Sección | Fuentes (se usa el primer enlace que responda) |
