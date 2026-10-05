@@ -1,6 +1,6 @@
 # Calendario Medieval
 
-Sitio estático para GitHub Pages. Incluye un calendario por años, un Pomodoro, una radio con muchas emisoras, un botón a la página de Hábitos y un **Pregón del día** con 20 noticias en tres pestañas, que se renueva solo gracias a un bot de GitHub Actions:
+Sitio estático para GitHub Pages. Incluye un calendario por años, un Pomodoro, una radio con muchas emisoras, una voz de bienvenida, un botón a la página de Hábitos y un **Pregón del día** con 20 noticias en tres pestañas, que se renueva solo gracias a un bot de GitHub Actions:
 
 | Pestaña | Cuántas | Qué trae |
 |---|---|---|
@@ -23,7 +23,7 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 7. [Probar el bot a mano](#7-probar-el-bot-a-mano)
 8. [Traducir las noticias (opcional)](#8-traducir-las-noticias-opcional)
 9. [El Pregón del día: cómo funciona y cómo personalizarlo](#9-el-pregón-del-día-cómo-funciona-y-cómo-personalizarlo)
-10. [Pomodoro, radio, Hábitos y tamaño en PC](#10-pomodoro-radio-hábitos-y-tamaño-en-pc)
+10. [Pomodoro, bienvenida, radio, Hábitos y tamaño en PC](#10-pomodoro-bienvenida-radio-hábitos-y-tamaño-en-pc)
 11. [Añadir o quitar años del calendario](#11-añadir-o-quitar-años-del-calendario)
 12. [Qué limpia el script](#12-qué-limpia-el-script)
 13. [Cambiar la hora del bot (y por qué a veces se retrasa)](#13-cambiar-la-hora-del-bot-y-por-qué-a-veces-se-retrasa)
@@ -35,6 +35,7 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 
 | Archivo | Para qué sirve | Dónde va en el repo |
 |---|---|---|
+| bienvenida.mp3 | La voz de bienvenida que suena al abrir la página (unos 12 segundos) | raíz, junto a index.html |
 | index.html | La página (calendario, Pomodoro, radio, oráculo, Hábitos y Pregón). Pesa unos 900 KB porque lleva las voces del Pomodoro incrustadas | raíz |
 | news.json | Lo escribe el bot en cada ejecución | raíz |
 | README.md | Estas instrucciones | raíz |
@@ -45,6 +46,7 @@ Estructura final que debe quedar en el repo:
 
 ```
 index.html
+bienvenida.mp3
 news.json
 README.md
 scripts/noticias.py
@@ -93,7 +95,7 @@ Sube los archivos sueltos, no el zip.
 ### 4a. Archivos de la raíz (subida normal)
 
 1. En el repo, pulsa **Add file → Upload files**.
-2. Sube `index.html`, `news.json` y `README.md`.
+2. Sube `index.html`, `bienvenida.mp3`, `news.json` y `README.md`.
 3. Pulsa **Commit changes**.
 
 ### 4b. El script (se crea a mano)
@@ -248,7 +250,7 @@ Por si quieres revisarlo a mano: tiene tres listas (`items` para geopolítica, `
 
 ---
 
-## 10. Pomodoro, radio, Hábitos y tamaño en PC
+## 10. Pomodoro, bienvenida, radio, Hábitos y tamaño en PC
 
 ### Tamaño en PC y en el celular
 
@@ -260,7 +262,8 @@ En pantallas de **900 px de ancho o más** (computadora) la página usa botones,
 - **⏭ Saltar:** pasa a la siguiente fase sin esperar. Si estabas en Enfoque, cuenta como pomodoro hecho.
 - **− y +:** restan o suman un pomodoro al contador de hoy (🍅), por si te olvidaste de iniciar uno o quieres corregirlo.
 - **Descanso largo:** cada 4 pomodoros completados.
-- **Voces:** al iniciar un Enfoque suena una voz, al terminarlo suena otra, y cada 8 pomodoros suena una especial. Están incrustadas en el archivo, así que funcionan sin internet. Si el navegador no deja reproducirlas, suena un pitido. Para cambiar cuál suena en cada momento, busca `const VOZ=` en `index.html` e intercambia las tres líneas.
+- **Voces:** al iniciar un Enfoque suena una voz, al terminarlo suena otra, y cada 8 pomodoros suena una especial. Están incrustadas en el archivo, así que funcionan sin internet. Si el navegador no deja reproducirlas, suena un pitido.
+- **🔊 Voz (control de volumen):** al lado del contador hay una barra para regular el volumen de las voces, del pitido y de la bienvenida. Va de 0 (silencio) a 100. Está pensada para los niveles bajos: el 50 suena bastante más bajo que antes (un cuarto del volumen original) y el 20 es muy suave. Al soltar la barra suena una muestra a ese volumen. El nivel se guarda en el navegador, así que no hay que volver a ponerlo. Con la barra en 0 no suena nada. Para cambiar cuál suena en cada momento, busca `const VOZ=` en `index.html` e intercambia las tres líneas.
 - **Memoria:** el contador de pomodoros se guarda en el navegador y se reinicia cada día. Si cierras la página por error, el temporizador retoma donde estaba.
 
 ### Radio
@@ -278,6 +281,16 @@ Se abre con el botón de la radio. Las emisoras vienen en categorías:
 
 > Dentro de visores o vistas previas las emisoras suelen bloquearse. Ábrela desde GitHub Pages o desde el archivo en tu navegador.
 
+### Voz de bienvenida
+
+Al abrir la página suena `bienvenida.mp3`. Para cambiarla, reemplaza ese archivo por otro audio MP3 con **el mismo nombre**.
+
+- **Los navegadores bloquean el sonido automático.** Chrome, Edge, Firefox y Safari no dejan sonar un audio en el instante de abrir una página, hasta que tocas algo. Por eso la página lo intenta al abrir y, si el navegador lo bloquea (lo más común), suena **con tu primer clic, toque o tecla**. Solo suena una vez por apertura.
+- Mientras suena aparece arriba a la derecha el botón **⏹ Detener bienvenida**.
+- Si inicias el Pomodoro mientras suena la bienvenida, esta se corta para no encimar las voces.
+- El volumen de la bienvenida es el de la barra **🔊 Voz** del Pomodoro. Con la barra en 0 no suena.
+- Si prefieres que no suene más, deja la barra en 0 o borra `bienvenida.mp3` del repo (la página sigue funcionando igual).
+
 ### Botón ⚔️ Hábitos
 
 Lleva a otra página tuya (la de hábitos). La dirección está en `index.html`, en una sola línea: busca `HABITOS_URL` y cambia el enlace entre comillas.
@@ -288,7 +301,7 @@ Lleva a otra página tuya (la de hábitos). La dirección está en `index.html`,
 
 Los años están definidos en `index.html`, en dos líneas seguidas. El calendario calcula los meses y los días con el año elegido, así que no hay que tocar nada más.
 
-Las dos líneas (están hacia la línea 246; en el editor usa la lupa o Ctrl+F y busca `const YEARS`):
+Las dos líneas (están hacia la línea 249; en el editor usa la lupa o Ctrl+F y busca `const YEARS`):
 
 ```js
 const YEARS=[2026,2027,2028,2029,2030];
@@ -452,6 +465,9 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 | Una emisora de la radio no suena | Está fuera del aire o el navegador bloqueó el audio | Toca otra emisora, o toca de nuevo la misma. Si tampoco suena ninguna, ábrela desde GitHub Pages, no desde una vista previa |
 | Las emisoras de Corea del Norte no cargan | Necesitan el reproductor auxiliar hls.js, que se baja de internet | Comprueba tu conexión; esas emisoras suelen estar fuera del aire |
 | El Pomodoro no dice la voz, solo pita | El navegador bloqueó el audio hasta que toques la página | Toca cualquier botón de la página una vez y vuelve a iniciar |
+| La bienvenida no suena al abrir la página | El navegador bloquea el sonido automático hasta que tocas la página | Es normal: suena con tu primer clic, toque o tecla |
+| La bienvenida nunca suena | Falta `bienvenida.mp3` en la raíz del repo, tiene otro nombre, o la barra 🔊 Voz está en 0 | Sube el archivo con ese nombre exacto, junto a `index.html`, y sube la barra |
+| La voz del Pomodoro asusta por lo fuerte | Volumen demasiado alto | Baja la barra 🔊 Voz (con 20 o 30 suena muy suave); queda guardado |
 | El contador 🍅 se puso en 0 | Cambió el día (se reinicia a diario) o cambiaste de navegador o dispositivo | Es normal. Usa **+** para corregirlo si hace falta |
 | El botón Hábitos lleva a un sitio equivocado | `HABITOS_URL` tiene otro enlace | Cambia el enlace en `index.html` (sección 10) |
 | Las noticias no cambian | Los medios no publicaron nada nuevo, o alguna fuente falló | Mira el log en Actions: cada fuente indica `OK` o `ERR` |
@@ -480,5 +496,6 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 - [ ] Pestaña Geopolítica con 5 notas, una "en español"
 - [ ] Probados la radio (una emisora suena), el Pomodoro (⏭ Saltar, − y +) y el botón ⚔️ Hábitos
 - [ ] En PC (pantalla ancha) los botones se ven grandes
+- [ ] `bienvenida.mp3` subido y la voz suena con el primer clic; la barra 🔊 Voz regula el volumen
 - [ ] (Opcional) `ANTHROPIC_API_KEY` configurada para traducir
 - [ ] Saber usar **Run workflow** como respaldo manual si una ejecución programada no llega
