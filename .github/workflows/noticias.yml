@@ -1,7 +1,7 @@
 name: Noticias diarias
 on:
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "11 */4 * * *"
   workflow_dispatch:
 permissions:
   contents: write
