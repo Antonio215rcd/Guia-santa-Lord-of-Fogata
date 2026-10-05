@@ -1,6 +1,13 @@
 {
-  "actualizado": "2026-10-04T17:51:47+00:00",
+  "actualizado": "2026-10-05T00:08:46+00:00",
   "items": [
+    {
+      "titulo": "The Kyle Anzalone Show: Showdown at the UN as the US and Iran Escalate Tensions",
+      "resumen": "Trump takes the UN stage and talks about Iran the way politicians talk when they want options to expand a war without owning the cost. I walk through what he said, why it lands as bluster instead of strategy, and how…",
+      "fuente": "Libertarian Institute",
+      "url": "https://libertarianinstitute.org/blog/the-kyle-anzalone-show-showdown-at-the-un-as-the-us-and-iran-escalate-tensions/?utm_source=rss&utm_medium=rss&utm_campaign=the-kyle-anzalone-show-showdown-at-the-un-as-the-us-and-iran-escalate-tensions",
+      "fecha": "2026-10-04"
+    },
     {
       "titulo": "Want To Stop the Iran War? Don't Pay the Bill",
       "resumen": "Congress can stop Trump's Iran war by failing to fund it.",
@@ -16,11 +23,137 @@
       "fecha": "2026-10-02"
     },
     {
-      "titulo": "US Threatens Diesel Export Ban to Germany, France If They Don’t Draw Down Domestic Reserves",
-      "resumen": "The White House is threatening NATO allies Germany and France for refusing to release diesel fuel from their emergency inventories. “US officials said France and Germany could be cut off from future US diesel exports…",
-      "fuente": "Libertarian Institute",
-      "url": "https://libertarianinstitute.org/news/us-threatens-diesel-export-ban-to-germany-france-if-they-dont-draw-down-domestic-reserves/?utm_source=rss&utm_medium=rss&utm_campaign=us-threatens-diesel-export-ban-to-germany-france-if-they-dont-draw-down-domestic-reserves",
+      "titulo": "The American Public Has Turned on Israel. Washington Doesn’t Care.",
+      "resumen": "For decades, American support for Israel was a bipartisan consensus. It was believed that only fringe figures, kooks, or antisemites would question the close bond between the two nations, and that this was a…",
+      "fuente": "Antiwar.com",
+      "url": "https://original.antiwar.com/nolan_denaro/2026/10/01/the-american-public-has-turned-on-israel-washington-doesnt-care/?utm_source=rss&utm_medium=rss&utm_campaign=the-american-public-has-turned-on-israel-washington-doesnt-care",
       "fecha": "2026-10-02"
+    },
+    {
+      "titulo": "Iran: Strait of Hormuz Will Not Reopen Until US Meets ‘Seven Conditions’",
+      "resumen": "Iran says that the US must meet seven conditions based on the Memorandum of Understanding (MOU) signed in June before it will allow the Strait of Hormuz to reopen. “The position of the Islamic Republic of Iran is…",
+      "fuente": "Libertarian Institute",
+      "url": "https://libertarianinstitute.org/news/iran-strait-of-hormuz-will-not-reopen-until-us-meets-seven-conditions/?utm_source=rss&utm_medium=rss&utm_campaign=iran-strait-of-hormuz-will-not-reopen-until-us-meets-seven-conditions",
+      "fecha": "2026-10-04"
+    }
+  ],
+  "politica": [
+    {
+      "titulo": "WATCH: Inside Vance’s First-Ever Florida Rally",
+      "resumen": "Vice President JD Vance held his first-ever political rally in Florida on Thursday. Why is the vice president’s midterm campaign tour stopping in a solid red state? President Donald Trump and Vance have both both been…",
+      "fuente": "The Daily Signal",
+      "url": "https://www.dailysignal.com/2026/10/04/watch-inside-vances-first-ever-florida-rally/",
+      "fecha": "2026-10-05"
+    },
+    {
+      "titulo": "Angela Paxton backs Texas GOP ticket without naming estranged husband Ken",
+      "resumen": "Texas Republican Senate candidate Ken Paxton’s estranged wife, Angela Paxton, addressed the “elephant in the room” in a new advertisement and urged Texas Republicans to vote for the GOP ticket regardless of who is on…",
+      "fuente": "Washington Examiner",
+      "url": "https://www.washingtonexaminer.com/news/campaigns/4753445/angela-paxton-texas-gop-ticket-husband-ken/",
+      "fecha": "2026-10-04"
+    },
+    {
+      "titulo": "A Conversation with \"One of the Most Influential Supreme Court Justices of Our Time\"",
+      "resumen": "Jan Crawford's profile of Justice Alito based upon the interviews that will air on CBS News.",
+      "fuente": "Reason",
+      "url": "https://reason.com/volokh/2026/10/04/a-conversation-with-one-of-the-most-influential-supreme-court-justices-of-our-time/",
+      "fecha": "2026-10-04"
+    },
+    {
+      "titulo": "The Question of Emissions Liability Finally Heads to the Right Court",
+      "resumen": "Suncor comes before the U.S. Supreme Court to resolve an issue only it can handle.",
+      "fuente": "National Review",
+      "url": "https://www.nationalreview.com/2026/10/the-question-of-emissions-liability-finally-heads-to-the-right-court/",
+      "fecha": "2026-10-04"
+    },
+    {
+      "titulo": "Óscar Rodríguez Carreiro inaugura las sesiones del Programa de Libertad Económica y Función Empresarial de Foro Liberal",
+      "resumen": "El programa, desarrollado académicamente por el Instituto Juan de Mariana, comienza en Alicante con una sesión dedicada a los efectos de las políticas públicas sobre la economía y las decisiones empresariales. Foro…",
+      "fuente": "Instituto Juan de Mariana",
+      "url": "https://juandemariana.org/oscar-rodriguez-carreiro-inaugura-las-sesiones-del-programa-de-libertad-economica-y-funcion-empresarial-de-foro-liberal/",
+      "fecha": "2026-10-03"
+    }
+  ],
+  "diarias": [
+    {
+      "titulo": "Iran war live: Yemen fighting intensifies; Tehran says ready for US attacks",
+      "resumen": "Yemeni government announces major offensive against Houthis as Iran says it is ready to defend itself if the US attacks.",
+      "fuente": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/10/5/iran-war-live-fighting-in-yemen-intensifies-tehran-says-ready-for-us-war?traffic_source=rss",
+      "fecha": "2026-10-05",
+      "cat": "⚔️ Guerra"
+    },
+    {
+      "titulo": "Anthropic report: Is Russia using AI for disinformation in the Central African Republic and elsewhere?",
+      "resumen": "An Anthropic report says the AI model Claude was used in pro-Russian campaigns in the Central African Republic. Similar allegations were raised for the Democratic Republic of the Congo, Kenya, Sudan and Mali.",
+      "fuente": "DW",
+      "url": "https://www.dw.com/en/anthropic-report-is-russia-using-ai-for-disinformation-in-the-central-african-republic-and-elsewhere/a-79476947?maca=en-rss-en-all-1573-rdf",
+      "fecha": "2026-10-04",
+      "cat": "⚔️ Guerra"
+    },
+    {
+      "titulo": "Papa León XIV invita a inspirarse en san Francisco de Asís",
+      "resumen": "«Jesús le pidió a Francisco que reparara su Iglesia»: durante la oración del Ángelus de este domingo 4 de octubre de 2026, León XIV se refirió principalmente a la festividad de san Francisco de Asís, en este día que…",
+      "fuente": "Aleteia",
+      "url": "https://es.aleteia.org/2026/10/04/papa-leon-xiv-invita-a-inspirarse-en-san-francisco-de-asis/",
+      "fecha": "2026-10-04",
+      "cat": "⛪ Iglesia católica"
+    },
+    {
+      "titulo": "Rudelli en Pompeya: de la oración las bases para una nueva civilización",
+      "resumen": "En la homilía antes de la Súplica a la Virgen del Rosario, el Sustituto para los Asuntos Generales de la Secretaría de Estado invitó a confiar a Dios “las realidades de hoy, especialmente las más atribuladas, para que…",
+      "fuente": "Vatican News",
+      "url": "https://www.vaticannews.va/es/vaticano/news/2026-10/suplica-pompeya-sustituto-rudelli-bartolo-longo-paz.html",
+      "fecha": "2026-10-04",
+      "cat": "⛪ Iglesia católica"
+    },
+    {
+      "titulo": "Kash Patel, girlfriend announce engagement",
+      "resumen": "FBI Director Kash Patel is engaged to Alexis Wilkins, the couple revealed on Sunday. “Went and got the law involved,” Wilkins wrote on social platform X, adding ring and heart emojis, tagging Patel and sharing a photo…",
+      "fuente": "The Hill",
+      "url": "https://thehill.com/blogs/in-the-know/6128704-fbi-director-kash-patel-engaged/",
+      "fecha": "2026-10-05",
+      "cat": "🇺🇸 Política de EE. UU."
+    },
+    {
+      "titulo": "FBI Director Kash Patel engaged to country singer Alexis Wilkins",
+      "resumen": "\"Went and got the law involved,\" Wilkins, 27, quipped.",
+      "fuente": "NY Post",
+      "url": "https://nypost.com/2026/10/04/us-news/fbi-director-kash-patel-engaged-to-country-singer-alexis-wilkins/",
+      "fecha": "2026-10-04",
+      "cat": "🇺🇸 Política de EE. UU."
+    },
+    {
+      "titulo": "Qué dijo Javier Milei de los resultados de las elecciones de Brasil 2026",
+      "resumen": "Tanto durante como tras del cierre de los comicios, el jefe de Estado se valió de las redes sociales para manifestar su apoyo a la candidatura del Flavio Bolsonaro",
+      "fuente": "La Nación",
+      "url": "https://www.lanacion.com.ar/politica/que-dijo-javier-milei-de-los-resultados-de-las-elecciones-de-brasil-2026-nid04102026/",
+      "fecha": "2026-10-04",
+      "cat": "🇦🇷 Política argentina"
+    },
+    {
+      "titulo": "Elecciones en Brasil: Milei respaldó a Flávio Bolsonaro y Massa apoyó a Lula en redes",
+      "resumen": "El Presidente siguió la jornada electoral desde Olivos y compartió publicaciones a favor del candidato del Partido Liberal. En paralelo, Sergio Massa manifestó su respaldo a Luiz Inácio Lula da Silva a través de sus…",
+      "fuente": "Perfil",
+      "url": "https://www.perfil.com/noticias/actualidad/elecciones-en-brasil-milei-respaldo-a-flavio-bolsonaro-y-massa-apoyo-a-lula-en-redes.phtml",
+      "fecha": "2026-10-04",
+      "cat": "🇦🇷 Política argentina"
+    },
+    {
+      "titulo": "Resultados en Villa María del Triunfo: David Morales es el virtual alcalde del distrito, según boca de urna de Datum",
+      "resumen": "La población del distrito de Villa María del Triunfo ya eligió a sus nuevas autoridades en estas Elecciones 2026. Conoce los resultados de la ONPE tras la elección del domingo 4 de octubre.",
+      "fuente": "La República",
+      "url": "https://larepublica.pe/politica/2026/10/04/resultados-onpe-villa-maria-del-triunfo-2026-quien-es-el-virtual-alcalde-hnews-102928",
+      "fecha": "2026-10-05",
+      "cat": "🇵🇪 Política peruana"
+    },
+    {
+      "titulo": "Elecciones Municipales y Regionales 2026 hoy EN VIVO: Rafael López Aliaga se impone en Lima, según Datum",
+      "resumen": "Elecciones Regionales y Municipales 2026 | Últimas noticias :icon: 19:03 ELECIONES MUNICIPALES Y REGIONALES | Datum a boca de urna Puno: Jhomar Tonconi (ASI-Juntos por el Perú) 29.3% San Martín: Óscar Cabrera (Avanza…",
+      "fuente": "El Comercio",
+      "url": "https://elcomercio.pe/politica/elecciones/elecciones-regionales-y-municipales-en-vivo-hoy-04-de-octubre-ultimas-noticias-candidatos-incidentes-resultados-y-mas-de-los-comicios-en-todo-el-peru-erm-2026-lbposting-noticia/",
+      "fecha": "2026-10-05",
+      "cat": "🇵🇪 Política peruana"
     }
   ]
 }
