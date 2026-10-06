@@ -137,8 +137,8 @@ button.on{background:linear-gradient(#9a1f33,#6a1220);color:#f6ecd2;box-shadow:i
 @media(min-width:900px){
 #news .box,#radio .box{max-width:min(1100px,94vw);max-height:94vh;padding:34px 44px}
 #news .box h3,#radio .box h3{font-size:44px}
-#nl{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
-#nl .sub{grid-column:1/-1}
+#news .nc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);grid-template-areas:"t p" "s p";column-gap:32px;row-gap:6px;align-items:start;padding:16px 26px}
+#news .nc a{grid-area:t}#news .nc p{grid-area:p;margin:0}#news .nc small{grid-area:s;align-self:end}
 #rlist{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
 #rlist>div{grid-column:1/-1}
 #ntabs button,#rtabs button{font-size:17px;padding:10px 20px}
