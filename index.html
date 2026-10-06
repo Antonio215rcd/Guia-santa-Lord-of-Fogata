@@ -133,6 +133,18 @@ button.on{background:linear-gradient(#9a1f33,#6a1220);color:#f6ecd2;box-shadow:i
 .box>div button{font-size:14px;padding:8px 18px}
 }
 @media(min-width:1400px){.box{max-width:920px}#oracle .box{max-width:980px}}
+/* ---- Escritorio: Tablón y Radio más grandes ---- */
+@media(min-width:900px){
+#news .box,#radio .box{max-width:min(1100px,94vw);max-height:94vh;padding:34px 44px}
+#news .box h3,#radio .box h3{font-size:44px}
+#nl{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+#nl .sub{grid-column:1/-1}
+#rlist{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+#rlist>div{grid-column:1/-1}
+#ntabs button,#rtabs button{font-size:17px;padding:10px 20px}
+#rst{font-size:18px}
+}
+@media(min-width:1400px){#news .box,#radio .box{max-width:min(1400px,92vw)}}
 /* ---- Escritorio: botones y controles más grandes ---- */
 @media(min-width:900px){
 header{position:static;padding:20px 16px}
