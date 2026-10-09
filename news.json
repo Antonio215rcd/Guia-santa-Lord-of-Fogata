@@ -1,6 +1,13 @@
 {
-  "actualizado": "2026-10-09T15:14:36+00:00",
+  "actualizado": "2026-10-09T20:50:04+00:00",
   "items": [
+    {
+      "titulo": "Trump Announces Deal to Import Russian Diesel",
+      "resumen": "President Donald Trump announced an agreement with Russia to supply millions of tons of diesel to the US and global markets. The announcement came a day after Ukrainian President Volodymyr Zelensky criticized…",
+      "fuente": "Libertarian Institute",
+      "url": "https://libertarianinstitute.org/news/trump-announces-deal-to-import-russian-diesel/?utm_source=rss&utm_medium=rss&utm_campaign=trump-announces-deal-to-import-russian-diesel",
+      "fecha": "2026-10-09"
+    },
     {
       "titulo": "Surviving Empire",
       "resumen": "",
@@ -28,35 +35,28 @@
       "fuente": "Antiwar.com",
       "url": "https://original.antiwar.com/worthington/2026/10/08/three-years-of-gaza-as-a-ghetto-of-genocidal-extermination/?utm_source=rss&utm_medium=rss&utm_campaign=three-years-of-gaza-as-a-ghetto-of-genocidal-extermination",
       "fecha": "2026-10-09"
-    },
-    {
-      "titulo": "Syria May Send Troops to Saudi Arabia Amid War with Ansar Allah",
-      "resumen": "A US and Syrian official said Syria is considering sending troops to Saudi Arabia as the kingdom battles Ansar Allah in Yemen. Reuters reported on Thursday that a US official and a Syrian defense official said that…",
-      "fuente": "Libertarian Institute",
-      "url": "https://libertarianinstitute.org/news/syria-may-send-troops-to-saudi-arabia-amid-war-with-ansar-allah/?utm_source=rss&utm_medium=rss&utm_campaign=syria-may-send-troops-to-saudi-arabia-amid-war-with-ansar-allah",
-      "fecha": "2026-10-08"
     }
   ],
   "politica": [
     {
-      "titulo": "Trump redoubles effort to fire Fed governor Lisa Cook with new investigative committee",
-      "resumen": "President Donald Trump has formed a committee to investigate Federal Reserve governor Lisa Cook over alleged mortgage fraud, an escalation after his previous effort to fire Cook was blocked by the Supreme Court. A White…",
-      "fuente": "Washington Examiner",
-      "url": "https://www.washingtonexaminer.com/news/white-house/4760947/trump-new-effort-fire-fed-governor-lisa-cook-investigative-committee/",
-      "fecha": "2026-10-09"
-    },
-    {
-      "titulo": "EXCLUSIVE: Conservative Coalition Urges Dr. Oz to End Medicare’s ‘Paying Twice’ Problem",
-      "resumen": "FIRST ON THE DAILY SIGNAL—A coalition of conservative and free-market groups is supporting a Trump administration proposal to prevent Medicare from paying twice for overlapping physician work performed during the same…",
+      "titulo": "EXCLUSIVE: Montana AG Asks Supreme Court to Revive Case Against DEI Training That Allegedly Declared ‘All Caucasians’ Racist",
+      "resumen": "FIRST ON THE DAILY SIGNAL—Montana Attorney General Austin Knudsen is leading 20 states in urging the Supreme Court to take up the case of Joshua Young, a former Colorado prison guard who sued the Department of…",
       "fuente": "The Daily Signal",
-      "url": "https://www.dailysignal.com/2026/10/09/exclusive-conservative-coalition-urges-dr-oz-end-medicares-paying-twice-problem/",
+      "url": "https://www.dailysignal.com/2026/10/09/exclusive-montana-ag-asks-supreme-court-revive-case-against-dei-training-that-allegedly-declared-all-caucasians-racist/",
       "fecha": "2026-10-09"
     },
     {
-      "titulo": "Trump's 'Free Speech Agenda: Siccing the FBI on Critics, Barring Reporters, and Threatening Broadcasters",
-      "resumen": "GOP's new mantra: \"Free speech for me, but not for thee.\"",
+      "titulo": "Who is Katie Zacharia, Trump’s next White House press secretary?",
+      "resumen": "President Donald Trump tapped Katie Zacharia, a conservative commentator and communications adviser for Trump Media and Technology Group, to serve as his next White House press secretary. Zacharia will succeed Karoline…",
+      "fuente": "Washington Examiner",
+      "url": "https://www.washingtonexaminer.com/news/white-house/4761492/who-is-katie-zacharia-white-house-press-secretary/",
+      "fecha": "2026-10-09"
+    },
+    {
+      "titulo": "Don't Blame AI Labs for What Hackers Do With Their Tools",
+      "resumen": "AI executives are planning for a public revolt after a major attack. A federal power grab is the wrong response.",
       "fuente": "Reason",
-      "url": "https://reason.com/2026/10/09/remember-when-trump-was-the-free-speech-candidate/",
+      "url": "https://reason.com/2026/10/09/dont-blame-ai-labs-for-what-hackers-do-with-their-tools/",
       "fecha": "2026-10-09"
     },
     {
@@ -76,82 +76,82 @@
   ],
   "diarias": [
     {
-      "titulo": "Ethiopia and Eritrea accuse one another of launching war",
-      "resumen": "Eritrea denies backing TPLF as Ethiopia alleges collusion, further straining their already volatile relationship.",
+      "titulo": "JD Vance casts doubt on firing squad execution and says he will not watch it",
+      "resumen": "The planned execution of Nidal Hasan by firing squad would be the first military execution in more than 60 years.",
+      "fuente": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/ck20r39nl3qzo?at_medium=RSS&at_campaign=rss",
+      "fecha": "2026-10-09",
+      "cat": "⚔️ Guerra"
+    },
+    {
+      "titulo": "Flydubai co-pilot plotted ‘suicide’ attack on Israel, UAE says",
+      "resumen": "Attorney General says suspect admitted he acted alone after preparing ‌‌psychologically ‌‌and physically for the attack.",
       "fuente": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/9/ethiopia-and-eritrea-accuse-one-another-of-launching-war?traffic_source=rss",
+      "url": "https://www.aljazeera.com/news/2026/10/9/flydubai-co-pilot-plotted-suicide-attack-on-israel-uae-says?traffic_source=rss",
       "fecha": "2026-10-09",
       "cat": "⚔️ Guerra"
     },
     {
-      "titulo": "Saudi coalition vows 'firm' response after airport attack kills 3",
-      "resumen": "Saudi Arabia and its allied forces in Yemen vowed a \"firm response\" to Houthi attacks that target civilians. The kingdom's authorities said three Saudi nationals were killed in Thursday's attack on Riyadh airport.",
-      "fuente": "DW",
-      "url": "https://www.dw.com/en/saudi-coalition-vows-firm-response-after-airport-attack-kills-3/a-79615437?maca=en-rss-en-all-1573-rdf",
+      "titulo": "Cardinal Parolin on US public execution: Death must not be turned into a spectacle",
+      "resumen": "Speaking on the sidelines of an event in Rome on John Henry Newman, Cardinal Secretary of State Pietro Parolin comments on plans to livestream the execution of Nidal Hassan in the United States, saying that turning…",
+      "fuente": "Vatican News (EN)",
+      "url": "https://www.vaticannews.va/en/vatican-city/news/2026-10/cardinal-parolin-comments-usa-public-execution-announcement.html",
       "fecha": "2026-10-09",
-      "cat": "⚔️ Guerra"
+      "cat": "⛪ Iglesia católica"
     },
     {
-      "titulo": "“Cuando experimentas una pérdida, te das cuenta de lo frágil que es la vida”",
-      "resumen": "Mihaela y David Bregar se conocieron en los scouts. Mihaela cuenta entre risas que lo primero que le llamó la atención de David fueron sus músculos, y él añade que enseguida la encontró atractiva. Como coincidieron en…",
+      "titulo": "Oraciones a la Virgen de su enamorado Tomás de Villanueva",
+      "resumen": "El obispo agustino, santo Tomás de Villanueva, introducía apasionadas alabanzas a la madre de Jesús en sus sermones sobre la Virgen María. Da la impresión de que al pensar en ella y compartir sus reflexiones, su corazón…",
       "fuente": "Aleteia",
-      "url": "https://es.aleteia.org/2026/10/09/cuando-experimentas-una-perdida-te-das-cuenta-de-lo-fragil-que-es-la-vida/",
+      "url": "https://es.aleteia.org/2026/10/09/oraciones-a-la-virgen-de-su-enamorado-tomas-de-villanueva/",
       "fecha": "2026-10-09",
       "cat": "⛪ Iglesia católica"
     },
     {
-      "titulo": "EE. UU., el arzobispo Coakley: la ejecución en streaming es «cultura de la muerte»",
-      "resumen": "El presidente de la Conferencia Episcopal de Estados Unidos comenta a los medios del Vaticano la decisión del Pentágono de retransmitir en directo la ejecución capital de Nidal Hasan, el excomandante del ejército…",
-      "fuente": "Vatican News",
-      "url": "https://www.vaticannews.va/es/iglesia/news/2026-10/ee-uu-arzobispo-coakley-sobre-la-ejecucion-en-streaming.html",
-      "fecha": "2026-10-09",
-      "cat": "⛪ Iglesia católica"
-    },
-    {
-      "titulo": "Trump boosts statement calling Nobel Peace Prize winner Navi Pillay ‘unabashed hater of America’",
-      "resumen": "WASHINGTON — President Trump re-posted a scathing statement Friday denouncing the choice of Navi Pillay, a former United Nations official who accused Israel of genocide, for the prestigious annual Nobel Peace Prize…",
+      "titulo": "Trump-backed Lukoil bid aims to restart refineries, deliver billions to US Treasury",
+      "resumen": "The deal sets a new precedent in Washington.",
       "fuente": "NY Post",
-      "url": "https://nypost.com/2026/10/09/us-news/trump-boosts-statement-calling-nobel-peace-prize-winner-navi-pillay-unabashed-hater-of-america/",
+      "url": "https://nypost.com/2026/10/09/us-news/trump-backed-lukoil-bid-aims-to-deliver-billions-to-us-treasury/",
       "fecha": "2026-10-09",
       "cat": "🇺🇸 Política de EE. UU."
     },
     {
-      "titulo": "Flock offers voluntary separation packages to staff amid camera backlash",
-      "resumen": "The automated license plate reader firm Flock Safety has offered employees voluntary separation packages ahead of its \"next phase of growth,\" as the firm faces mounting scrutiny from communities and policymakers across…",
+      "titulo": "French NBA star Wembanyama expresses support for student protests",
+      "resumen": "French-born San Antonio Spurs star Victor Wembanyama is expressed support for students in his home country who have taken to the streets in the thousands in recent weeks protesting the conditions of their schools…",
       "fuente": "The Hill",
-      "url": "https://thehill.com/business/6138704-flock-safety-offers-separation-packages/",
+      "url": "https://thehill.com/homenews/education/6139777-victor-wembanyama-french-student-protests/",
       "fecha": "2026-10-09",
       "cat": "🇺🇸 Política de EE. UU."
     },
     {
-      "titulo": "Javier Milei y sus medidas, en vivo: el mandatario volvió a cargar contra la prensa y acusó a una periodista de “zurda”",
-      "resumen": "El minuto a minuto de las decisiones del Presidente, las reacciones de la oposición y declaraciones de los funcionarios",
+      "titulo": "El Gobierno convocará a una mega sesión en Diputados para frenar la avanzada opositora por el DNU 70",
+      "resumen": "Como anticipó Infobae, La Libertad Avanza propondrá abrir el recinto el 21 de octubre y así desactivar la sesión que está prevista para el 15. Incluirá la derogación del artículo de Ley de Tierras, un proyecto sobre…",
+      "fuente": "Infobae",
+      "url": "https://www.infobae.com/politica/2026/10/09/el-gobierno-convocara-a-una-mega-sesion-en-diputados-para-frenar-la-avanzada-opositora-por-el-dnu-70/",
+      "fecha": "2026-10-09",
+      "cat": "🇦🇷 Política argentina"
+    },
+    {
+      "titulo": "Un condecorado veterano de Malvinas asumirá como rector de la Escuela Nacional de Inteligencia",
+      "resumen": "El coronel retirado Carlos Daniel Esteban obtuvo la medalla Al Valor en Combate por sus acciones en 1982, tiene un doctorado en Ciencias Políticas y es secretario en la Universidad de la Defensa",
       "fuente": "La Nación",
-      "url": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-el-mandatario-volvio-a-cargar-contra-la-prensa-y-acuso-a-una-nid09102026/",
+      "url": "https://www.lanacion.com.ar/seguridad/un-condecorado-veterano-de-malvinas-seria-el-candidato-a-asumir-como-director-de-la-escuela-nacional-nid08102026/",
       "fecha": "2026-10-09",
       "cat": "🇦🇷 Política argentina"
     },
     {
-      "titulo": "El PJ correntino ratificó la expulsión de Camau Espinola y rechazó el ajuste de Milei",
-      "resumen": "El Consejo Provincial solicitó acelerar la sanción contra el senador nacional por respaldar las políticas de Javier Milei. Leer más",
-      "fuente": "Perfil",
-      "url": "https://www.perfil.com/noticias/nea/el-pj-correntino-ratifico-la-expulsion-de-camau-espinola-y-rechazo-el-ajuste-de-milei.phtml",
-      "fecha": "2026-10-09",
-      "cat": "🇦🇷 Política argentina"
-    },
-    {
-      "titulo": "Senado: Luis Galarreta sustenta ante Comisión de Constitución pedido de facultades legislativas",
-      "resumen": "La Comisión de Constitución, Reglamento y Relaciones Exteriores del Senado convocó para este viernes 9 de octubre al presidente del Consejo de Ministros, Luis Fernando Galarreta, y a otros seis ministros para que…",
-      "fuente": "El Comercio",
-      "url": "https://elcomercio.pe/politica/congreso/facultades-senado-en-vivo-comision-de-constitucion-convoca-a-siete-ministros-para-exponer-su-posicion-frente-a-pedido-del-gobierno-y-dictamen-apuesplan-noticia/",
+      "titulo": "Luis Galarreta insiste ante el Senado que facultades aprobadas por diputados son insuficientes: \"Negarlas sería histórico\"",
+      "resumen": "El premier sostuvo que el Ejecutivo necesita legislar sobre ocho materias, pero la Cámara de Diputados solo aprobó seis. Durante su presentación ante la Comisión de Constitución, reconoció que el Gobierno puede tomar…",
+      "fuente": "La República",
+      "url": "https://larepublica.pe/politica/2026/10/09/luis-galarreta-insiste-ante-el-senado-que-facultades-aprobadas-por-diputados-son-insuficientes-negarlas-seria-historico-hnews-816417",
       "fecha": "2026-10-09",
       "cat": "🇵🇪 Política peruana"
     },
     {
-      "titulo": "Senadores y diputados viajarán a China con todos los gastos pagados por el régimen chino: ¿Quiénes son?",
-      "resumen": "Según Mirtha Vásquez, el objetivo de la visita es “fortalecer el intercambio entre ambos países”. La senadora de Ahora Nación exigió que el temas de las cuestionadas empresas chinas que operan en el país sea un punto de…",
-      "fuente": "Infobae Perú",
-      "url": "https://www.infobae.com/peru/2026/10/09/senadores-y-diputados-viajaran-a-china-con-todos-los-gastos-pagados-por-el-regimen-chino-quienes-son/",
+      "titulo": "La dispersión del voto creció en las últimas elecciones municipales en Lima Metropolitana: ¿Cuántos distritos y qué zonas apoyaron a los alcaldes ganadores?",
+      "resumen": "El voto en Lima Metropolitana se ha fragmentado con el paso de los años. En las últimas elecciones municipales, celebradas en el 2022, Rafael López Aliaga, de Renovación Popular, se convirtió en alcalde de la capital…",
+      "fuente": "El Comercio",
+      "url": "https://elcomercio.pe/ecdata/elecciones-2026-la-dispersion-del-voto-crecio-en-las-ultimas-elecciones-municipales-en-lima-metropolitana-cuantos-distritos-y-que-zonas-apoyaron-a-los-alcaldes-ganadores-rafael-lopez-aliaga-carlos-bruce-francis-allison-onpe-jne-noticia/",
       "fecha": "2026-10-09",
       "cat": "🇵🇪 Política peruana"
     }
