@@ -1,6 +1,6 @@
 # Calendario Medieval
 
-Sitio estático para GitHub Pages. Incluye un calendario por años, un Pomodoro, una radio con muchas emisoras, una voz de bienvenida, un botón a la página de Hábitos y un **Pregón del día** con 20 noticias en tres pestañas, que se renueva solo gracias a un bot de GitHub Actions:
+Sitio estático para GitHub Pages. Incluye un calendario por años, un Pomodoro, una radio con muchas emisoras, una voz de bienvenida, un botón a la página de Hábitos y un **Pregón del día** con 20 noticias en tres pestañas (más una cuarta con tus newsletters en PDF), que se renueva solo gracias a un bot de GitHub Actions:
 
 | Pestaña | Cuántas | Qué trae |
 |---|---|---|
@@ -27,8 +27,9 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 11. [Añadir o quitar años del calendario](#11-añadir-o-quitar-años-del-calendario)
 12. [Qué limpia el script](#12-qué-limpia-el-script)
 13. [Cambiar la hora del bot (y por qué a veces se retrasa)](#13-cambiar-la-hora-del-bot-y-por-qué-a-veces-se-retrasa)
-14. [Problemas frecuentes](#14-problemas-frecuentes)
-15. [Newsletters en PDF (pestaña 📬)](#15-newsletters-en-pdf-pestaña-)
+14. [Mantenimiento mensual (página de aviso)](#14-mantenimiento-mensual-página-de-aviso)
+15. [Problemas frecuentes](#15-problemas-frecuentes)
+16. [Newsletters en PDF (pestaña 📬)](#16-newsletters-en-pdf-pestaña-)
 
 ---
 
@@ -36,7 +37,8 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 
 | Archivo | Para qué sirve | Dónde va en el repo |
 |---|---|---|
-| bienvenida.mp3 | La voz de bienvenida que suena al abrir la página (unos 12 segundos) | raíz, junto a index.html |
+| bienvenida.mp3 | La voz de bienvenida que suena al abrir la página (unos 2 segundos) | raíz, junto a index.html |
+| mantenimiento.html | Página de aviso para los días de mantenimiento. **No va en el repo tal cual**: se guarda en tu PC y se sube temporalmente con el nombre `index.html` (sección 14) | tu PC |
 | index.html | La página (calendario, Pomodoro, radio, oráculo, Hábitos y Pregón). Pesa unos 900 KB porque lleva las voces del Pomodoro incrustadas | raíz |
 | news.json | Lo escribe el bot en cada ejecución | raíz |
 | README.md | Estas instrucciones | raíz |
@@ -77,6 +79,7 @@ Al copiar y pegar un archivo largo, a veces se corta. Después de guardar, abre 
 |---|---|
 | scripts/noticias.py | **286** |
 | .github/workflows/noticias.yml | **35** |
+| .github/workflows/newsletters.yml | **41** |
 
 Si `noticias.py` muestra bastantes menos líneas, está cortado y el bot fallará a los pocos segundos con "exit code 1". Pégalo de nuevo, entero.
 
@@ -181,7 +184,7 @@ El aviso amarillo "Node.js 20 is deprecated" es solo una advertencia de GitHub. 
 
 **Importante:** el `news.json` que viene en el zip es de antes de las pestañas nuevas. Hasta la primera ejecución del bot, "Política" y "Diarias" mostrarán "Esta sección se llena con la próxima actualización automática". Es normal.
 
-A partir de ahí el bot corre solo, a las horas que indique el `cron` (por defecto, cada 3 horas, en el minuto 11 UTC). Puede retrasarse o saltarse alguna ejecución; ver la sección 13.
+A partir de ahí el bot corre solo, a las horas que indique el `cron` (por defecto, cada 4 horas, en el minuto 11 UTC). Puede retrasarse o saltarse alguna ejecución; ver la sección 13.
 
 ---
 
@@ -204,13 +207,23 @@ Si no configuras la clave, todo funciona igual.
 
 ### En la página
 
-Pulsa **📰 Tablón**. Verás tres pestañas con el número de noticias de cada una. En **Diarias** las tarjetas aparecen agrupadas por tema (⚔️ Guerra, ⛪ Iglesia católica, 🇺🇸 Política de EE. UU., 🇦🇷 Política argentina, 🇵🇪 Política peruana).
+Pulsa **📰 Tablón**. Verás cuatro pestañas con el número de elementos de cada una (la cuarta, **📬 Newsletter**, es la de tus PDF: sección 16). En **Diarias** las tarjetas aparecen agrupadas por tema (⚔️ Guerra, ⛪ Iglesia católica, 🇺🇸 Política de EE. UU., 🇦🇷 Política argentina, 🇵🇪 Política peruana).
 
 Son medios con una línea editorial propia, no cobertura neutral: conviene contrastar con otras fuentes.
 
 ### Caja del Servicio Meteorológico Nacional
 
 Arriba de las pestañas hay una tarjeta fija con el enlace al Servicio Meteorológico Nacional de Argentina (https://www.smn.gob.ar/). No depende del bot ni de `news.json`: siempre está. Para cambiar el enlace o el texto, busca en `index.html` (Ctrl+F) `smn.gob.ar`.
+
+### Caja de Newsletter (Instituto Juan de Mariana)
+
+**Estado actual: oculta.** Para mostrarla, busca `MOSTRAR_IJM` en `index.html` (Ctrl+F) y cambia `false` por `true`.
+
+(Esta tarjeta es solo el **enlace para suscribirse**. Los PDF que tú guardes aparecen aparte, en la pestaña **📬 Newsletter**: sección 16.)
+
+Debajo de la caja del clima hay otra tarjeta fija, **📬 Newsletter · Instituto Juan de Mariana**, que abre la página oficial del Instituto en la zona de suscripción (`https://juandemariana.org/#newsletter_box`). La persona escribe su correo **allí**, en el formulario del propio Instituto, así que el correo no pasa por esta página: no se recibe, no se guarda y no hace falta ningún servidor. Si el enlace no te deja justo en el formulario, baja hasta el pie de la página del Instituto, donde dice "Suscríbete a nuestra newsletter". Para cambiar el texto o el enlace, busca `newsletter_box` en `index.html` (Ctrl+F).
+
+Una casilla para escribir el correo directamente en esta página no se incluyó a propósito: haría falta enviar esos correos al formulario del Instituto (con su permiso y su código de formulario) o guardarlos aquí, con lo cual esta página pasaría a manejar datos personales de otras personas.
 
 ### De dónde salen las noticias
 
@@ -262,6 +275,8 @@ Por si quieres revisarlo a mano: tiene tres listas (`items` para geopolítica, `
 
 En pantallas de **900 px de ancho o más** (computadora) la página usa botones, años, días del calendario, textos y Pomodoro más grandes. En el celular se queda el tamaño compacto. Si quieres cambiar los tamaños, busca en `index.html` (Ctrl+F) el comentario `Escritorio: botones y controles más grandes`: es un único bloque `@media(min-width:900px)` donde cada línea es un elemento (`#years button`, `.d`, `#pmt`, etc.) y el número de `font-size` o `padding` es el que manda.
 
+En esas pantallas anchas, el **Tablón** y la **Radio** se abren en una ventana mucho más grande (hasta unos 1100 px, y 1400 px en pantallas de 1400 px o más), las emisoras se ordenan en **dos columnas** y cada noticia es un **rectángulo horizontal largo**, de ancho completo: el título y la fuente a la izquierda, el resumen a la derecha. Los tamaños de letra de las noticias están en las dos líneas siguientes a ese comentario: `font-size:29px` (título), `24px` (resumen) y `16px` (fuente); súbelos o bájalos a gusto. Para cambiar el tamaño, busca en `index.html` (Ctrl+F) el comentario `Escritorio: Tablón y Radio más grandes` y cambia los números de `max-width` (ancho) y `max-height` (alto).
+
 ### Pomodoro
 
 - **▶ Iniciar / ↺ Reiniciar / ⚙ Tiempo:** arrancar, volver a empezar la fase y configurar los minutos de enfoque, descanso corto y descanso largo.
@@ -296,6 +311,14 @@ Al abrir la página suena `bienvenida.mp3`. Para cambiarla, reemplaza ese archiv
 - Si inicias el Pomodoro mientras suena la bienvenida, esta se corta para no encimar las voces.
 - El volumen de la bienvenida es el de la barra **🔊 Voz** del Pomodoro. Con la barra en 0 no suena.
 - Si prefieres que no suene más, deja la barra en 0 o borra `bienvenida.mp3` del repo (la página sigue funcionando igual).
+
+### Botón ❤️ Donar (Cafecito)
+
+**Estado actual: oculto.** Para mostrarlo, busca `MOSTRAR_DONAR` en `index.html` (Ctrl+F) y cambia `false` por `true`. Lo mismo vale para el cartel de la página de mantenimiento (`mantenimiento.html`).
+
+En la barra de botones de arriba, después de ⚔️ Hábitos, hay un botón **❤️ Donar**. Abre una ventana del mismo tamaño que el Tablón y la Radio, con el mensaje de que el proyecto se mantiene gracias a los aportes y un botón que lleva a https://cafecito.app/lionheartd. Se cierra con **Cerrar** o tocando fuera de la ventana. La página de mantenimiento (sección 14) trae un cartel con el mismo mensaje y enlace.
+
+Para cambiar el enlace o el texto, busca `cafecito.app` en `index.html` y en `mantenimiento.html` (Ctrl+F). Para quitarlo de la página principal, borra la línea del botón `id="donb"` y el bloque `<div id="donar">` hasta su cierre.
 
 ### Botón ⚔️ Hábitos
 
@@ -383,7 +406,7 @@ const YEARS=[2027,2028,2029,2030];
 En `.github/workflows/noticias.yml` está esta línea:
 
 ```yaml
-- cron: "11 */3 * * *"   # cada 3 horas, en el minuto 11 (UTC)
+- cron: "11 */4 * * *"   # cada 4 horas, en el minuto 11 (UTC)
 ```
 
 Los números son **minuto hora día-del-mes mes día-de-la-semana**, y la hora es siempre **UTC**. Lo que escribas después del `#` es solo un comentario: GitHub lo ignora (ponle un espacio antes del `#` y no lo metas dentro de las comillas).
@@ -395,6 +418,7 @@ Ejemplos:
 | Una vez al día, 9:11 UTC | `11 9 * * *` |
 | Dos veces al día (9:11 y 21:11 UTC) | `11 9,21 * * *` |
 | Cada 6 horas (4 veces al día) | `11 */6 * * *` |
+| Cada 4 horas (6 veces al día) | `11 */4 * * *` |
 | Cada 3 horas (8 veces al día) | `11 */3 * * *` |
 | Cada 2 horas (12 veces al día) | `11 */2 * * *` |
 
@@ -423,7 +447,7 @@ Esto **no es un error de tu configuración**. Pasa seguido:
 
 Como no se puede garantizar una hora exacta, la forma más fiable es no depender de una sola ejecución. El proyecto ya viene así:
 
-1. **Ejecuciones más seguidas.** Con `11 */3 * * *`, si una se retrasa o se salta, otra llega poco después. Es gratis: en un repositorio público, GitHub Actions no tiene coste, y cada ejecución dura menos de un minuto.
+1. **Ejecuciones más seguidas.** Con `11 */4 * * *`, si una se retrasa o se salta, otra llega poco después. Es gratis: en un repositorio público, GitHub Actions no tiene coste, y cada ejecución dura menos de un minuto.
 2. **Minuto distinto de 0.** Se usa el `11` para esquivar la hora en punto.
 3. **Botón manual de respaldo.** Si ves que las noticias están viejas y necesitas algo fresco ya, ve a **Actions → Noticias diarias → Run workflow → Run workflow**. Es lo más rápido y siempre funciona, aunque todo lo demás falle.
 4. **Si todo falla,** revisa que la última ejecución en Actions no salga en rojo, y que **Settings → Actions → General** siga con **Allow all actions** y **Read and write permissions** (secciones 6 y 7).
@@ -451,7 +475,45 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 
 ---
 
-## 14. Problemas frecuentes
+## 14. Mantenimiento mensual (página de aviso)
+
+`mantenimiento.html` es una página de aviso para los días en que vayas a modificar el calendario (por ejemplo, un par de horas una vez al mes). Cuando la subes en lugar del `index.html` normal, quien entra ve:
+
+- Un cartel de **🛠️ Reino en mantenimiento**, con el motivo y la hora estimada de regreso (con cuenta regresiva).
+- Un aviso de **⚠️ Haz tu respaldo lo antes posible**, con el botón **⬇ Descargar respaldo**. Funciona aunque el calendario no esté disponible: lee los mismos eventos que el calendario guarda en el navegador. Si el navegador no deja descargar, el botón **📋 Copiar como texto** los copia al portapapeles.
+- Instrucciones para recuperar todo cuando vuelva la página: **⬆ Cargar** (o el botón **📋 Texto**). El archivo tiene el mismo formato que el ⬇ Respaldo normal, así que el calendario lo reconoce.
+- Se vuelve a comprobar sola cada 5 minutos y, cuando el `index.html` normal ya está de vuelta, abre el calendario sin que nadie haga nada.
+
+### Paso a paso
+
+**Antes de empezar**
+
+1. Guarda una copia de tu `index.html` actual en tu PC. (GitHub también guarda el historial en **Commits**, pero así es más fácil.)
+2. Abre `mantenimiento.html` con el Bloc de notas (o cualquier editor de texto). Arriba del script hay dos líneas para editar:
+   - `MOTIVO`: lo que quieres contar, por ejemplo "Estamos agregando una sección nueva".
+   - `VUELVE`: la hora estimada de regreso **con zona horaria**, por ejemplo `"2026-11-01T20:00:00-03:00"` (Argentina: `-03:00`; Perú: `-05:00`). Si la dejas vacía, dice "Volvemos en unas horas".
+3. Haz una copia de ese archivo y renómbrala exactamente **`index.html`** (que la extensión sea `.html` de verdad, no `index.html.txt`).
+4. En el repo: **Add file → Upload files**, sube ese `index.html` a la raíz y confirma que reemplazas el anterior. Espera uno o dos minutos y abre la página con Ctrl+F5: debe verse el cartel.
+
+**Durante el mantenimiento**
+
+5. Trabaja en tu PC con tu `index.html` de verdad y pruébalo abriéndolo en el navegador.
+
+**Al terminar**
+
+6. Sube tu `index.html` nuevo a la raíz del repo, reemplazando el de mantenimiento. Espera uno o dos minutos y abre con Ctrl+F5.
+7. Comprueba que los eventos siguen ahí.
+
+### Cosas que conviene saber
+
+- **El mantenimiento no borra los eventos.** Viven en el navegador de cada persona mientras la dirección de la página siga siendo la misma. Si algún día cambias el nombre del repositorio o del usuario, la dirección cambia y los eventos dejan de verse; ahí el respaldo es lo que salva todo.
+- El botón de descarga respalda los **eventos del calendario**. No incluye el contador de pomodoros ni el volumen de la voz.
+- Solo cambia el archivo `index.html`. El resto (`news.json`, `bienvenida.mp3`, el bot de noticias) sigue funcionando durante el mantenimiento.
+- Mientras esté la página de aviso no se ve el Pregón, la radio ni el Pomodoro, porque es otra página.
+
+---
+
+## 15. Problemas frecuentes
 
 | Problema | Causa probable | Solución |
 |---|---|---|
@@ -474,41 +536,178 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 | La bienvenida no suena al abrir la página | El navegador bloquea el sonido automático hasta que tocas la página | Es normal: suena con tu primer clic, toque o tecla |
 | La bienvenida nunca suena | Falta `bienvenida.mp3` en la raíz del repo, tiene otro nombre, o la barra 🔊 Voz está en 0 | Sube el archivo con ese nombre exacto, junto a `index.html`, y sube la barra |
 | La voz del Pomodoro asusta por lo fuerte | Volumen demasiado alto | Baja la barra 🔊 Voz (con 20 o 30 suena muy suave); queda guardado |
+| La pestaña 📬 dice "Aún no hay newsletters" aunque el PDF está subido | El bot no corrió (la lista sigue vacía: ábrela, debe mostrar el nombre del PDF), o el navegador guardó la versión vieja | Recarga con Ctrl+F5. Si sigue igual: **Actions → Newsletters → Run workflow**. Comprueba que el PDF esté dentro de la carpeta `newsletters` (no en la raíz) y que termine en `.pdf` |
 | El contador 🍅 se puso en 0 | Cambió el día (se reinicia a diario) o cambiaste de navegador o dispositivo | Es normal. Usa **+** para corregirlo si hace falta |
 | El botón Hábitos lleva a un sitio equivocado | `HABITOS_URL` tiene otro enlace | Cambia el enlace en `index.html` (sección 10) |
 | Las noticias no cambian | Los medios no publicaron nada nuevo, o alguna fuente falló | Mira el log en Actions: cada fuente indica `OK` o `ERR` |
 | Los años nuevos no aparecen | Cambio sin guardar o Pages aún publica | Comprueba el commit en `index.html`, espera un par de minutos y recarga con Ctrl+F5 |
-| El bot se ejecutó horas más tarde de lo programado, o no se ejecutó | GitHub retrasa o se salta tareas programadas, sobre todo en horas en punto y en repos con poca actividad | Usa ejecuciones frecuentes (`11 */3 * * *`), un minuto distinto de 0, y el botón **Run workflow** como respaldo (sección 13) |
+| El bot se ejecutó horas más tarde de lo programado, o no se ejecutó | GitHub retrasa o se salta tareas programadas, sobre todo en horas en punto y en repos con poca actividad | Usa ejecuciones frecuentes (`11 */4 * * *`), un minuto distinto de 0, y el botón **Run workflow** como respaldo (sección 13) |
 | El bot dejó de correr del todo después de semanas | GitHub desactiva los workflows programados tras 60 días sin actividad en el repo | Actions → Noticias diarias → botón para habilitarlo de nuevo |
 | La hora de "Actualizado" no cambió aunque el bot corrió | Las noticias elegidas fueron las mismas y no hubo nada que guardar | Es normal. Mira en Actions si la ejecución salió en verde |
 | No sé si una actualización fue manual o programada | La página solo muestra la hora | En Actions, cada ejecución dice "Manually run" o "Scheduled" |
 | Quité un año de la lista y mis eventos desaparecieron | No se borraron: solo están ocultos mientras ese año no esté en la lista | Vuelve a añadir el año a `YEARS` y reaparecen. Antes de quitar años, usa **⬇ Respaldo** |
 | La lista de años quedó desordenada y abre en un año raro | El primer año de la lista es el que se abre por defecto | Ordena `YEARS` de menor a mayor |
 
-## 15. Newsletters en PDF (pestaña 📬)
+---
 
-El Tablón tiene una cuarta pestaña, **📬 Newsletter**, que muestra los PDF de la carpeta `newsletters`. La subida es manual: tú descargas la newsletter, la subes y aparece sola en la página.
+## 16. Newsletters en PDF (pestaña 📬)
 
-### Subir una newsletter
+Esta sección explica **todo** lo de las newsletters: cómo funciona, cómo dejarlo andando por primera vez, cómo subir una cada vez, cómo borrarla y qué hacer si algo falla.
 
-1. **Guarda la newsletter como PDF.** En Gmail: abre el correo, toca los tres puntos, **Imprimir** y elige **Guardar como PDF** (en el celular: Compartir, Imprimir, Guardar como PDF).
-2. **Ponle nombre con la fecha al principio**, con el formato `AAAA-MM-DD`, y si quieres un título después: `2026-10-08.pdf` o `2026-10-08_Nombre-del-tema.pdf`. Sin espacios ni tildes es más seguro. La fecha hace que se ordenen solas, de la más nueva a la más vieja.
-3. **Entra a tu repositorio en GitHub** y abre la carpeta `newsletters`.
-4. Pulsa **Add file**, luego **Upload files**, arrastra (o elige) el PDF y pulsa **Commit changes**. Desde el celular funciona igual en la web de GitHub, o con la app.
-5. **Espera 1 o 2 minutos.** Al subir un PDF se activa el bot **Newsletters** (lo ves en la pestaña **Actions**), que actualiza `newsletters/lista.json`. Cuando termina en verde, abre el Tablón, pulsa **📬 Newsletter** y el PDF estará ahí. Si no aparece, recarga la página.
+### 16.1 Qué es y cómo funciona
 
-### Borrar una newsletter
+El Tablón tiene una cuarta pestaña, **📬 Newsletter**, que muestra los PDF que guardes en la carpeta `newsletters` del repositorio. La subida es manual: tú descargas la newsletter como PDF, la subes y aparece en la página.
 
-En GitHub abre el PDF dentro de `newsletters`, pulsa los tres puntos y **Delete file**. Al borrarlo, ve a **Actions**, elige **Newsletters** y pulsa **Run workflow** para que la lista se actualice (el bot solo se activa solo cuando se sube un PDF).
+El recorrido completo es este:
 
-### Cosas a saber
+1. **Subes un PDF** a la carpeta `newsletters` en GitHub.
+2. GitHub ve que hay un PDF nuevo y lanza solo el bot **Newsletters** (el archivo `newsletters.yml`).
+3. El bot hace una lista con los nombres de todos los PDF de la carpeta y la guarda en `newsletters/lista.json`.
+4. La página lee esa lista y dibuja una tarjeta por cada PDF, de la más nueva a la más vieja.
+5. **Respaldo:** si `lista.json` está vacío o no se puede leer, la página le pregunta directamente a GitHub qué PDF hay en la carpeta. Así el PDF aparece aunque el bot falle.
 
-- **La carpeta empieza vacía.** Mientras no subas nada, la pestaña dice "Aún no hay newsletters". Es lo normal.
-- **No toques `lista.json`.** Lo escribe el bot. Si alguna vez la lista se desordena o se descuadra, ve a **Actions**, elige **Newsletters** y pulsa **Run workflow**.
-- **Permisos del bot.** Usa el mismo permiso de escritura del paso 6. Si ya te funciona el bot de noticias, este también.
-- **Repositorio público.** Los PDF quedan visibles para cualquiera que tenga el enlace. La newsletter del Instituto Juan de Mariana es pública, pero conviene no subir correos con datos personales (por ejemplo, el enlace de "darse de baja" lleva tu dirección de correo).
+Las piezas son estas:
+
+| Pieza | Para qué sirve | Quién la toca |
+|---|---|---|
+| `newsletters/` (carpeta) | Aquí guardas los PDF | Tú |
+| `newsletters/*.pdf` | Cada newsletter | Tú |
+| `newsletters/lista.json` | La lista de PDF | El bot (tú no la toques) |
+| `newsletters/.gitkeep` | Archivo vacío que mantiene viva la carpeta aunque no haya PDF | Nadie |
+| `.github/workflows/newsletters.yml` | El bot que escribe la lista | Se crea una sola vez |
+| `index.html` | Dibuja la pestaña 📬 | Ya viene incluida |
+
+### 16.2 Puesta en marcha (una sola vez)
+
+**Paso 1. Crea la carpeta y la lista inicial.**
+En el repo pulsa **Add file → Create new file**. En el nombre escribe **a mano** `newsletters/lista.json` (al escribir la `/` se crea la carpeta). Como contenido pega exactamente esto y pulsa **Commit changes**:
+
+```
+{"archivos":[]}
+```
+
+**Paso 2. Crea el bot a mano.**
+Es la parte donde más gente se atasca, porque la carpeta `.github` **no se puede subir con "Upload files"** (regla 3). Pulsa **Add file → Create new file**, escribe **a mano** el nombre `.github/workflows/newsletters.yml`, pega todo el contenido de abajo y pulsa **Commit changes**:
+
+```yaml
+name: Newsletters
+on:
+  push:
+    paths:
+      - "newsletters/**.pdf"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: newsletters
+  cancel-in-progress: false
+jobs:
+  listar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar newsletters/lista.json
+        run: |
+          python3 - <<'PY'
+          import json, os
+          nombres = sorted(
+              (f for f in os.listdir("newsletters") if f.lower().endswith(".pdf")),
+              reverse=True,
+          )
+          with open("newsletters/lista.json", "w", encoding="utf-8") as fh:
+              json.dump({"archivos": nombres}, fh, ensure_ascii=False, indent=1)
+              fh.write("\n")
+          PY
+      - name: Guardar cambios
+        run: |
+          git config user.name "noticias-bot"
+          git config user.email "noticias-bot@users.noreply.github.com"
+          git add newsletters/lista.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios que guardar."
+            exit 0
+          fi
+          git commit -m "Lista de newsletters"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+```
+
+Después abre el archivo y comprueba que ponga **41 lines** (regla 2). Si pone menos, se cortó al pegar: pégalo de nuevo, entero. Si cambias algo sin querer, el bot deja de funcionar.
+
+**Paso 3. Permisos.**
+El bot necesita escribir en el repo. Revisa el paso 6 de este README (**Read and write permissions**). Si el bot de noticias ya te funciona, este también.
+
+**Paso 4. Sube el `index.html` actual.**
+Tiene que ser la versión que trae la pestaña 📬 Newsletter. Si en el Tablón solo ves tres pestañas, el `index.html` del repo es viejo.
+
+**Paso 5. Pruébalo a mano.**
+Crear el bot **no lo activa solo**, porque el bot solo se lanza cuando se sube un PDF. La primera vez hay que lanzarlo tú:
+
+1. Pestaña **Actions**. A la izquierda debe aparecer **Newsletters**. (Si no aparece, mira la tabla del apartado 16.6.)
+2. Pulsa **Newsletters → Run workflow → Run workflow**.
+3. Espera a que termine en verde.
+4. Abre `newsletters/lista.json`: debe mostrar el nombre de tu PDF dentro de `archivos`.
+5. Abre tu página, pulsa **📰 Tablón → 📬 Newsletter** y recarga con **Ctrl+F5**.
+
+### 16.3 Subir una newsletter (lo que haces cada vez)
+
+1. **Guarda la newsletter como PDF.** En Gmail: abre el correo, toca los tres puntos, **Imprimir** y elige **Guardar como PDF**. En el celular: Compartir, Imprimir, Guardar como PDF.
+2. **Ponle un nombre correcto** (reglas abajo).
+3. En GitHub abre la carpeta `newsletters`.
+4. Pulsa **Add file → Upload files**, arrastra o elige el PDF y pulsa **Commit changes**. Desde el celular funciona igual en la web de GitHub.
+5. **Espera 1 o 2 minutos.** En **Actions** verás correr el bot **Newsletters**.
+6. Cuando termine en verde, abre el Tablón, pulsa **📬 Newsletter** y recarga si hace falta.
+
+**Cómo nombrar el PDF**
+
+- Sin espacios, sin tildes y sin ñ. Usa guiones o guiones bajos. (Con espacios o ñ el archivo puede no abrirse bien. A ti te pasó: al quitar los espacios funcionó.)
+- Termina siempre en `.pdf`.
+- Va **dentro** de la carpeta `newsletters`, no en la raíz.
+- Empieza con la fecha, en cualquiera de estos dos formatos, y después, si quieres, un título.
+
+| Nombre del archivo | Fecha que muestra | Título que muestra |
+|---|---|---|
+| `2026-10-08_Nombre-del-tema.pdf` | 2026-10-08 | Nombre del tema |
+| `7-10-26-Keating-no-ensenaba-poesia.pdf` | 2026-10-07 | Keating no ensenaba poesia |
+| `2026-10-08.pdf` | 2026-10-08 | Newsletter |
+| `sin-fecha.pdf` | (ninguna) | sin fecha |
+
+El formato corto `D-M-AA` se lee **día-mes-año**: `7-10-26` es el 7 de octubre de 2026. La página ordena por esa fecha, de la más nueva a la más vieja; las que no tienen fecha van al final. El título sale del nombre cambiando los guiones por espacios, así que no tendrá tildes.
+
+### 16.4 Borrar o reemplazar una newsletter
+
+- **Borrar:** abre el PDF dentro de `newsletters`, pulsa los tres puntos (**⋯**) y **Delete file**. Si la tarjeta no desaparece en un par de minutos, ve a **Actions → Newsletters → Run workflow** para que la lista se actualice.
+- **Renombrar:** GitHub no renombra archivos subidos desde el navegador de forma cómoda. Lo más simple es subir el PDF con el nombre nuevo y borrar el viejo.
+- **Reemplazar el contenido:** sube un PDF con **el mismo nombre**; GitHub te pregunta si reemplaza.
+
+### 16.5 Cosas que conviene saber
+
+- **No toques `lista.json`.** Lo escribe el bot. Si alguna vez se descuadra, ve a **Actions → Newsletters → Run workflow**.
+- **Parche de emergencia:** si necesitas que un PDF aparezca ya y el bot no responde, edita `lista.json` a mano con el nombre exacto: `{"archivos":["7-10-26-Keating-no-ensenaba-poesia.pdf"]}`. Con el respaldo de la página normalmente ni hace falta.
+- **El respaldo de la página** solo funciona abierto desde la dirección de GitHub Pages (`usuario.github.io/...`), con el repositorio público. GitHub limita esas consultas (60 por hora por conexión), de sobra para uso normal, y la página solo las hace cuando la lista está vacía.
+- **La vista previa de GitHub** a veces no muestra los PDF y dice "Unable to render code block". No es un error del archivo: usa el botón de descarga (⬇) o ábrelo desde tu página.
+- **Tamaño:** desde la web de GitHub puedes subir archivos de hasta 25 MB.
+- **Repositorio público:** cualquiera puede ver los PDF si tiene el enlace. La newsletter del Instituto Juan de Mariana es pública, pero conviene no subir correos con datos personales: por ejemplo, el enlace de "darse de baja" lleva tu dirección de correo. Sube solo lo que puedas compartir.
 - **Si no abre el PDF en el celular,** pulsa el enlace de nuevo: algunos navegadores lo descargan en lugar de mostrarlo.
-- **Cambiar el nombre de la fuente.** Busca en `index.html` (Ctrl+F) `Instituto Juan de Mariana` y cámbialo.
+- **Cambiar el nombre de la fuente:** hoy cada tarjeta dice "Instituto Juan de Mariana". Para cambiarlo, busca en `index.html` (Ctrl+F) `fuente:"Instituto Juan de Mariana"` y cambia el texto. (La tarjeta de enlace para suscribirse al Instituto es otra cosa: está oculta por ahora, ver `MOSTRAR_IJM`.)
+
+### 16.6 Si algo falla
+
+| Problema | Causa probable | Solución |
+|---|---|---|
+| En Actions no aparece **Newsletters** | El archivo no está en la ruta exacta `.github/workflows/newsletters.yml`, o tiene una comilla en el nombre | Repite el paso 2 de 16.2 escribiendo la ruta a mano |
+| Aparece un cartel rojo "Invalid workflow file" | Se pegó mal o quedó cortado | Comprueba que tenga **41 líneas** y pégalo de nuevo entero |
+| El bot sale en rojo en "Guardar cambios" (error 403) | Falta el permiso de escritura | Paso 6: **Read and write permissions** |
+| Subí el PDF y el bot no se lanzó | El PDF no está dentro de `newsletters`, no termina en `.pdf`, o el bot se creó después de subir el PDF | Revisa la ruta y el nombre; lanza el bot a mano con **Run workflow** |
+| `lista.json` sigue en `{"archivos":[]}` | El bot no corrió | **Actions → Newsletters → Run workflow** |
+| La pestaña dice "Aún no hay newsletters" | La lista está vacía y la página tampoco pudo leer la carpeta | Recarga con Ctrl+F5; lanza el bot; comprueba que abres la página desde `github.io`, no desde un archivo local |
+| Solo veo tres pestañas, sin 📬 | El `index.html` del repo es una versión vieja | Sube el `index.html` actual |
+| Aparece la tarjeta pero el PDF no abre | El nombre cambió o tiene espacios o ñ, o la lista quedó vieja | Usa nombres sin espacios ni ñ y lanza el bot a mano |
+| El PDF se descarga en vez de abrirse | El navegador o el celular lo decide así | Es normal; abre el archivo descargado |
+| La fecha sale mal (7-10 como 10 de julio) | El formato corto es día-mes-año | Usa `AAAA-MM-DD` si prefieres evitar dudas |
+| Una newsletter no queda primera aunque es la más nueva | No empieza con fecha | Ponle la fecha al principio del nombre |
+| Carpeta o archivo con una comilla (`` `newsletters ``) | Copiaste el nombre en vez de escribirlo (regla 1) | Renómbralo a mano con el lápiz de **Edit** |
 
 ---
 
@@ -523,11 +722,15 @@ En GitHub abre el PDF dentro de `newsletters`, pulsa los tres puntos y **Delete 
 - [ ] Read and write permissions activado
 - [ ] Probado con **Run workflow** y salió en verde
 - [ ] Revisado el log: las fuentes principales salen `OK` y la última línea dice `Listo: 5 geopolítica, 5 política, 10 diarias.`
-- [ ] Pregón abierto desde GitHub Pages: se ven las 3 pestañas con noticias
+- [ ] Pregón abierto desde GitHub Pages: se ven las 4 pestañas (la de Newsletter puede estar vacía al principio)
 - [ ] Pestaña Geopolítica con 5 notas, una "en español"
 - [ ] Probados la radio (una emisora suena), el Pomodoro (⏭ Saltar, − y +) y el botón ⚔️ Hábitos
 - [ ] En PC (pantalla ancha) los botones se ven grandes
 - [ ] `bienvenida.mp3` subido y la voz suena con el primer clic; la barra 🔊 Voz regula el volumen
 - [ ] (Opcional) `ANTHROPIC_API_KEY` configurada para traducir
+- [ ] Tener `mantenimiento.html` guardado en la PC para los días de mantenimiento (sección 14)
+- [ ] `.github/workflows/newsletters.yml` creado a mano (41 líneas) y `newsletters/lista.json` creado
+- [ ] Probado **Actions → Newsletters → Run workflow** en verde; `lista.json` muestra el nombre del PDF
+- [ ] Pestaña 📬 Newsletter visible en el Tablón y el PDF abre desde la tarjeta
+- [ ] PDF con nombre sin espacios, tildes ni ñ, y con la fecha al principio
 - [ ] Saber usar **Run workflow** como respaldo manual si una ejecución programada no llega
-- [ ] Carpeta `newsletters` y workflow `newsletters.yml` subidos; pestaña 📬 Newsletter visible en el Tablón
