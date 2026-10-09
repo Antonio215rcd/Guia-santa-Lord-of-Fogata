@@ -1,0 +1,41 @@
+name: Newsletters
+on:
+  push:
+    paths:
+      - "newsletters/**.pdf"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: newsletters
+  cancel-in-progress: false
+jobs:
+  listar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar newsletters/lista.json
+        run: |
+          python3 - <<'PY'
+          import json, os
+          nombres = sorted(
+              (f for f in os.listdir("newsletters") if f.lower().endswith(".pdf")),
+              reverse=True,
+          )
+          with open("newsletters/lista.json", "w", encoding="utf-8") as fh:
+              json.dump({"archivos": nombres}, fh, ensure_ascii=False, indent=1)
+              fh.write("\n")
+          PY
+      - name: Guardar cambios
+        run: |
+          git config user.name "noticias-bot"
+          git config user.email "noticias-bot@users.noreply.github.com"
+          git add newsletters/lista.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios que guardar."
+            exit 0
+          fi
+          git commit -m "Lista de newsletters"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
