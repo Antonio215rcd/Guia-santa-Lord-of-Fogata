@@ -28,6 +28,7 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 12. [Qué limpia el script](#12-qué-limpia-el-script)
 13. [Cambiar la hora del bot (y por qué a veces se retrasa)](#13-cambiar-la-hora-del-bot-y-por-qué-a-veces-se-retrasa)
 14. [Problemas frecuentes](#14-problemas-frecuentes)
+15. [Newsletters en PDF (pestaña 📬)](#15-newsletters-en-pdf-pestaña-)
 
 ---
 
@@ -41,6 +42,8 @@ Por defecto el calendario cubre **2026–2030**. Más abajo se explica cómo amp
 | README.md | Estas instrucciones | raíz |
 | noticias.py | Busca, limpia y elige las 20 noticias | carpeta scripts |
 | noticias.yml | Lo ejecuta GitHub automáticamente | carpeta .github/workflows |
+| newsletters.yml | Actualiza la lista de newsletters cuando subes un PDF | carpeta .github/workflows |
+| newsletters/ | Carpeta donde subes los PDF de la newsletter (y `lista.json`, que escribe el bot) | raíz |
 
 Estructura final que debe quedar en el repo:
 
@@ -51,6 +54,9 @@ news.json
 README.md
 scripts/noticias.py
 .github/workflows/noticias.yml
+.github/workflows/newsletters.yml
+newsletters/lista.json
+newsletters/.gitkeep
 ```
 
 Ojo: en el zip los archivos ya vienen en esas carpetas, pero al subirlos a GitHub las dos carpetas hay que crearlas a mano (pasos 4b y 4c). No pongas copias sueltas de `noticias.py` o `noticias.yml` en la raíz: no hacen nada.
@@ -479,6 +485,31 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 | Quité un año de la lista y mis eventos desaparecieron | No se borraron: solo están ocultos mientras ese año no esté en la lista | Vuelve a añadir el año a `YEARS` y reaparecen. Antes de quitar años, usa **⬇ Respaldo** |
 | La lista de años quedó desordenada y abre en un año raro | El primer año de la lista es el que se abre por defecto | Ordena `YEARS` de menor a mayor |
 
+## 15. Newsletters en PDF (pestaña 📬)
+
+El Tablón tiene una cuarta pestaña, **📬 Newsletter**, que muestra los PDF de la carpeta `newsletters`. La subida es manual: tú descargas la newsletter, la subes y aparece sola en la página.
+
+### Subir una newsletter
+
+1. **Guarda la newsletter como PDF.** En Gmail: abre el correo, toca los tres puntos, **Imprimir** y elige **Guardar como PDF** (en el celular: Compartir, Imprimir, Guardar como PDF).
+2. **Ponle nombre con la fecha al principio**, con el formato `AAAA-MM-DD`, y si quieres un título después: `2026-10-08.pdf` o `2026-10-08_Nombre-del-tema.pdf`. Sin espacios ni tildes es más seguro. La fecha hace que se ordenen solas, de la más nueva a la más vieja.
+3. **Entra a tu repositorio en GitHub** y abre la carpeta `newsletters`.
+4. Pulsa **Add file**, luego **Upload files**, arrastra (o elige) el PDF y pulsa **Commit changes**. Desde el celular funciona igual en la web de GitHub, o con la app.
+5. **Espera 1 o 2 minutos.** Al subir un PDF se activa el bot **Newsletters** (lo ves en la pestaña **Actions**), que actualiza `newsletters/lista.json`. Cuando termina en verde, abre el Tablón, pulsa **📬 Newsletter** y el PDF estará ahí. Si no aparece, recarga la página.
+
+### Borrar una newsletter
+
+En GitHub abre el PDF dentro de `newsletters`, pulsa los tres puntos y **Delete file**. Al borrarlo, ve a **Actions**, elige **Newsletters** y pulsa **Run workflow** para que la lista se actualice (el bot solo se activa solo cuando se sube un PDF).
+
+### Cosas a saber
+
+- **La carpeta empieza vacía.** Mientras no subas nada, la pestaña dice "Aún no hay newsletters". Es lo normal.
+- **No toques `lista.json`.** Lo escribe el bot. Si alguna vez la lista se desordena o se descuadra, ve a **Actions**, elige **Newsletters** y pulsa **Run workflow**.
+- **Permisos del bot.** Usa el mismo permiso de escritura del paso 6. Si ya te funciona el bot de noticias, este también.
+- **Repositorio público.** Los PDF quedan visibles para cualquiera que tenga el enlace. La newsletter del Instituto Juan de Mariana es pública, pero conviene no subir correos con datos personales (por ejemplo, el enlace de "darse de baja" lleva tu dirección de correo).
+- **Si no abre el PDF en el celular,** pulsa el enlace de nuevo: algunos navegadores lo descargan en lugar de mostrarlo.
+- **Cambiar el nombre de la fuente.** Busca en `index.html` (Ctrl+F) `Instituto Juan de Mariana` y cámbialo.
+
 ---
 
 ## Resumen rápido (checklist)
@@ -499,3 +530,4 @@ Un cambio en el `cron` vale desde el siguiente horario programado. No dispara un
 - [ ] `bienvenida.mp3` subido y la voz suena con el primer clic; la barra 🔊 Voz regula el volumen
 - [ ] (Opcional) `ANTHROPIC_API_KEY` configurada para traducir
 - [ ] Saber usar **Run workflow** como respaldo manual si una ejecución programada no llega
+- [ ] Carpeta `newsletters` y workflow `newsletters.yml` subidos; pestaña 📬 Newsletter visible en el Tablón
