@@ -662,7 +662,7 @@ document.getElementById("rstop").onclick=()=>{stopRadio();drawRadio()};
 document.getElementById("radio").onclick=e=>{if(e.target.id=="radio")e.target.classList.remove("show")};
 
 /* ---- Tablón de noticias (lee news.json, que se renueva a diario) ---- */
-const NSEC=[["items","🌍 Geopolítica"],["politica","⚖️ Política"],["diarias","🗞️ Diarias"]];
+const NSEC=[["items","🌍 Geopolítica"],["politica","⚖️ Política"],["diarias","🗞️ Diarias"],["newsletter","📬 Newsletter"]];
 let NJ=null,NS="items";
 function showNews(){
   const l=document.getElementById("nl"),tb=document.getElementById("ntabs");
@@ -672,7 +672,7 @@ function showNews(){
     b.className=k==NS?"on":"";b.onclick=()=>{NS=k;showNews()};tb.appendChild(b);
   });
   const it=(NJ[NS]||[]).filter(x=>/^https?:\/\//.test(x.url));
-  if(!it.length){l.textContent="Esta sección se llena con la próxima actualización automática.";return}
+  if(!it.length){l.textContent=NS=="newsletter"?"Aún no hay newsletters. Sube un PDF a la carpeta newsletters del repositorio.":"Esta sección se llena con la próxima actualización automática.";return}
   let last="";
   it.forEach(x=>{
     if(x.cat&&x.cat!==last){
@@ -693,6 +693,19 @@ async function loadNews(){
     const r=await fetch("news.json?d="+new Date().toISOString().slice(0,10),{cache:"no-cache"});
     if(!r.ok)throw 0;
     NJ=await r.json();
+    NJ.newsletter=[];
+    try{
+      const rl=await fetch("newsletters/lista.json?d="+new Date().toISOString().slice(0,10),{cache:"no-cache"});
+      if(rl.ok){
+        const lj=await rl.json();
+        NJ.newsletter=(lj.archivos||[]).filter(n=>/\.pdf$/i.test(n)).map(n=>{
+          const base=n.replace(/\.pdf$/i,"");
+          const m=base.match(/^(\d{4}-\d{2}-\d{2})[_\s-]*(.*)$/);
+          const tit=(m?m[2]:base).replace(/[_-]+/g," ").trim();
+          return{titulo:tit||"Newsletter",url:new URL("newsletters/"+encodeURIComponent(n),location.href).href,fuente:"Instituto Juan de Mariana",fecha:m?m[1]:"",resumen:"Abrir el PDF"};
+        });
+      }
+    }catch(e){}
     if(NJ.actualizado)d.textContent="Actualizado: "+new Date(NJ.actualizado).toLocaleString("es",{dateStyle:"long",timeStyle:"short"});
     showNews();
   }catch(e){l.textContent="No se pudo cargar el tablón. Ábrelo desde GitHub Pages: abierto como archivo local el navegador bloquea la lectura."}
