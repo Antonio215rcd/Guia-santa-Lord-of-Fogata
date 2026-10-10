@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-09T20:50:04+00:00",
+  "actualizado": "2026-10-10T05:44:01+00:00",
   "items": [
     {
       "titulo": "Trump Announces Deal to Import Russian Diesel",
@@ -39,24 +39,24 @@
   ],
   "politica": [
     {
-      "titulo": "EXCLUSIVE: Montana AG Asks Supreme Court to Revive Case Against DEI Training That Allegedly Declared ‘All Caucasians’ Racist",
-      "resumen": "FIRST ON THE DAILY SIGNAL—Montana Attorney General Austin Knudsen is leading 20 states in urging the Supreme Court to take up the case of Joshua Young, a former Colorado prison guard who sued the Department of…",
-      "fuente": "The Daily Signal",
-      "url": "https://www.dailysignal.com/2026/10/09/exclusive-montana-ag-asks-supreme-court-revive-case-against-dei-training-that-allegedly-declared-all-caucasians-racist/",
-      "fecha": "2026-10-09"
-    },
-    {
-      "titulo": "Who is Katie Zacharia, Trump’s next White House press secretary?",
-      "resumen": "President Donald Trump tapped Katie Zacharia, a conservative commentator and communications adviser for Trump Media and Technology Group, to serve as his next White House press secretary. Zacharia will succeed Karoline…",
+      "titulo": "Trump calls Nobel committee’s decision an ‘indelible stain’ on Norway: ‘A disgraceful and embarrassing decision’",
+      "resumen": "President Donald Trump decried the Nobel committee’s decision to award the Nobel Peace Prize to Navi Pillay, saying the decision disgraced Norway as a whole. Speaking at a rally in Syracuse, New York, Trump went on a…",
       "fuente": "Washington Examiner",
-      "url": "https://www.washingtonexaminer.com/news/white-house/4761492/who-is-katie-zacharia-white-house-press-secretary/",
+      "url": "https://www.washingtonexaminer.com/news/white-house/4762088/trump-nobel-peace-prize-decision-indelible-stain-norway/",
+      "fecha": "2026-10-10"
+    },
+    {
+      "titulo": "Collins vs. Ossoff Debate: Biggest Takeaways",
+      "resumen": "On Thursday night, Sen. Jon Ossoff and Rep. Mike Collins took the stage in Doraville, Georgia, to face off against each other in a heated debate. The event comes at a crucial time leading up to the midterm elections…",
+      "fuente": "The Daily Signal",
+      "url": "https://www.dailysignal.com/2026/10/09/collins-ossoff-debate/",
       "fecha": "2026-10-09"
     },
     {
-      "titulo": "Don't Blame AI Labs for What Hackers Do With Their Tools",
-      "resumen": "AI executives are planning for a public revolt after a major attack. A federal power grab is the wrong response.",
+      "titulo": "Kafka's The Trial \"Was Not Supposed to Be an Instruction Manual\"",
+      "resumen": "In a Fifth Circuit case (which the court just declined to rehear en banc), a woman had faced potential prosecution for publishing a photo of a transgender politician washing hands in a women's restroom.",
       "fuente": "Reason",
-      "url": "https://reason.com/2026/10/09/dont-blame-ai-labs-for-what-hackers-do-with-their-tools/",
+      "url": "https://reason.com/volokh/2026/10/09/kafkas-the-trial-was-not-supposed-to-be-an-instruction-manual/",
       "fecha": "2026-10-09"
     },
     {
@@ -76,20 +76,28 @@
   ],
   "diarias": [
     {
-      "titulo": "JD Vance casts doubt on firing squad execution and says he will not watch it",
-      "resumen": "The planned execution of Nidal Hasan by firing squad would be the first military execution in more than 60 years.",
+      "titulo": "Nord Stream trial: How German police followed the evidence - to Ukraine",
+      "resumen": "After four years, a Ukrainian man is set to stand trial in Hamburg accused of sabotaging the Nord Stream pipelines.",
       "fuente": "BBC News",
-      "url": "https://www.bbc.co.uk/news/articles/ck20r39nl3qzo?at_medium=RSS&at_campaign=rss",
-      "fecha": "2026-10-09",
+      "url": "https://www.bbc.co.uk/news/articles/c317ke5ngrq7o?at_medium=RSS&at_campaign=rss",
+      "fecha": "2026-10-10",
       "cat": "⚔️ Guerra"
     },
     {
-      "titulo": "Flydubai co-pilot plotted ‘suicide’ attack on Israel, UAE says",
-      "resumen": "Attorney General says suspect admitted he acted alone after preparing ‌‌psychologically ‌‌and physically for the attack.",
+      "titulo": "Hours after Trump-Putin diesel deal, Ukraine strikes Russian fuel site",
+      "resumen": "Ukraine bombed a Russian fuel site, hours after US President Trump and Russian President Putin announced a diesel deal.",
       "fuente": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/9/flydubai-co-pilot-plotted-suicide-attack-on-israel-uae-says?traffic_source=rss",
-      "fecha": "2026-10-09",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/10/10-10-ukraine-drone-russia-oil-clip?traffic_source=rss",
+      "fecha": "2026-10-10",
       "cat": "⚔️ Guerra"
+    },
+    {
+      "titulo": "Ansiedad infantil: una guía para padres realizada por expertos",
+      "resumen": "La ansiedad nos ayuda a detectar situaciones de peligro. Provoca que el cuerpo entre en un estado de alerta y busque protegerse. Por ello, no es malo sentir ansiedad en las distintas etapas de nuestra vida, sin embargo…",
+      "fuente": "Aleteia",
+      "url": "https://es.aleteia.org/2026/10/09/ansiedad-infantil-una-guia-para-padres-realizada-por-expertos/",
+      "fecha": "2026-10-09",
+      "cat": "⛪ Iglesia católica"
     },
     {
       "titulo": "Cardinal Parolin on US public execution: Death must not be turned into a spectacle",
@@ -100,58 +108,50 @@
       "cat": "⛪ Iglesia católica"
     },
     {
-      "titulo": "Oraciones a la Virgen de su enamorado Tomás de Villanueva",
-      "resumen": "El obispo agustino, santo Tomás de Villanueva, introducía apasionadas alabanzas a la madre de Jesús en sus sermones sobre la Virgen María. Da la impresión de que al pensar en ella y compartir sus reflexiones, su corazón…",
-      "fuente": "Aleteia",
-      "url": "https://es.aleteia.org/2026/10/09/oraciones-a-la-virgen-de-su-enamorado-tomas-de-villanueva/",
-      "fecha": "2026-10-09",
-      "cat": "⛪ Iglesia católica"
-    },
-    {
-      "titulo": "Trump-backed Lukoil bid aims to restart refineries, deliver billions to US Treasury",
-      "resumen": "The deal sets a new precedent in Washington.",
+      "titulo": "Kamala Harris’ husband, Doug Emhoff, doesn’t want her running for president in 2028: report",
+      "resumen": "Emhoff has privately told people that he would prefer for his wife to stay out of the 2028 presidential race, the Wall Street Journal reported on Friday.",
       "fuente": "NY Post",
-      "url": "https://nypost.com/2026/10/09/us-news/trump-backed-lukoil-bid-aims-to-deliver-billions-to-us-treasury/",
-      "fecha": "2026-10-09",
+      "url": "https://nypost.com/2026/10/10/us-news/kamala-harris-husband-doug-emhoff-doesnt-want-her-running-for-president-in-2028-report/",
+      "fecha": "2026-10-10",
       "cat": "🇺🇸 Política de EE. UU."
     },
     {
-      "titulo": "French NBA star Wembanyama expresses support for student protests",
-      "resumen": "French-born San Antonio Spurs star Victor Wembanyama is expressed support for students in his home country who have taken to the streets in the thousands in recent weeks protesting the conditions of their schools…",
+      "titulo": "Federal judge: DOJ cannot request states' voter lists for eligibility database",
+      "resumen": "A federal judge struck down on Friday the Justice Department’s nationwide effort to collect voter registration records and identify suspected non-U.S. citizens, blocking the Trump administration from continuing the…",
       "fuente": "The Hill",
-      "url": "https://thehill.com/homenews/education/6139777-victor-wembanyama-french-student-protests/",
-      "fecha": "2026-10-09",
+      "url": "https://thehill.com/regulation/court-battles/6140273-judge-blocks-doj-voter-rolls-program/",
+      "fecha": "2026-10-10",
       "cat": "🇺🇸 Política de EE. UU."
     },
     {
-      "titulo": "El Gobierno convocará a una mega sesión en Diputados para frenar la avanzada opositora por el DNU 70",
-      "resumen": "Como anticipó Infobae, La Libertad Avanza propondrá abrir el recinto el 21 de octubre y así desactivar la sesión que está prevista para el 15. Incluirá la derogación del artículo de Ley de Tierras, un proyecto sobre…",
-      "fuente": "Infobae",
-      "url": "https://www.infobae.com/politica/2026/10/09/el-gobierno-convocara-a-una-mega-sesion-en-diputados-para-frenar-la-avanzada-opositora-por-el-dnu-70/",
-      "fecha": "2026-10-09",
+      "titulo": "Ricardo Lorenzetti defendió la suspensión del DNU sobre la Ley de Tierras: \"La Corte siempre protegió los recursos naturales\"",
+      "resumen": "El magistrado justificó la medida cautelar tomada por motivos ambientales e institucionales, aunque calificó como \"legítima\" la postura de Carlos Rosenkrantz, quien firmó en disidencia. Leer más",
+      "fuente": "Perfil",
+      "url": "https://www.perfil.com/noticias/politica/ricardo-lorenzetti-defendio-la-suspension-del-dnu-sobre-la-ley-de-tierras-la-corte-siempre-protegio-los-recursos-naturales.phtml",
+      "fecha": "2026-10-10",
       "cat": "🇦🇷 Política argentina"
     },
     {
-      "titulo": "Un condecorado veterano de Malvinas asumirá como rector de la Escuela Nacional de Inteligencia",
-      "resumen": "El coronel retirado Carlos Daniel Esteban obtuvo la medalla Al Valor en Combate por sus acciones en 1982, tiene un doctorado en Ciencias Políticas y es secretario en la Universidad de la Defensa",
+      "titulo": "El Gobierno “extraña” a Adorni y busca sumar voces para “equilibrar” las críticas de Patricia Bullrich",
+      "resumen": "Surgen voceros por temáticas y el portavoz Ravier mantiene la conferencia de prensa semanal, pero con poco efecto; silencio de Santilli y apariciones fugaces de Karina Milei",
       "fuente": "La Nación",
-      "url": "https://www.lanacion.com.ar/seguridad/un-condecorado-veterano-de-malvinas-seria-el-candidato-a-asumir-como-director-de-la-escuela-nacional-nid08102026/",
-      "fecha": "2026-10-09",
+      "url": "https://www.lanacion.com.ar/politica/el-gobierno-extrana-a-adorni-y-busca-sumar-voces-para-equilibrar-las-criticas-de-patricia-bullrich-nid10102026/",
+      "fecha": "2026-10-10",
       "cat": "🇦🇷 Política argentina"
     },
     {
-      "titulo": "Luis Galarreta insiste ante el Senado que facultades aprobadas por diputados son insuficientes: \"Negarlas sería histórico\"",
-      "resumen": "El premier sostuvo que el Ejecutivo necesita legislar sobre ocho materias, pero la Cámara de Diputados solo aprobó seis. Durante su presentación ante la Comisión de Constitución, reconoció que el Gobierno puede tomar…",
-      "fuente": "La República",
-      "url": "https://larepublica.pe/politica/2026/10/09/luis-galarreta-insiste-ante-el-senado-que-facultades-aprobadas-por-diputados-son-insuficientes-negarlas-seria-historico-hnews-816417",
-      "fecha": "2026-10-09",
+      "titulo": "Gobierno pide facultades en inteligencia y declarar “hostiles” a bandas criminales: ¿qué otras medidas solicitó incorporar?",
+      "resumen": "Rafael y su sombra, una crónica de Fernando Vivas sobre López Aliaga y las elecciones municipales Piden al JEE y a ONPE celeridad para definir resultados de la elección por la Alcaldía de Lima Tras 73 días de gestión…",
+      "fuente": "El Comercio",
+      "url": "https://elcomercio.pe/politica/gobierno-pide-facultades-en-inteligencia-y-declarar-hostiles-a-bandas-criminales-apuesplan-noticia/",
+      "fecha": "2026-10-10",
       "cat": "🇵🇪 Política peruana"
     },
     {
-      "titulo": "La dispersión del voto creció en las últimas elecciones municipales en Lima Metropolitana: ¿Cuántos distritos y qué zonas apoyaron a los alcaldes ganadores?",
-      "resumen": "El voto en Lima Metropolitana se ha fragmentado con el paso de los años. En las últimas elecciones municipales, celebradas en el 2022, Rafael López Aliaga, de Renovación Popular, se convirtió en alcalde de la capital…",
-      "fuente": "El Comercio",
-      "url": "https://elcomercio.pe/ecdata/elecciones-2026-la-dispersion-del-voto-crecio-en-las-ultimas-elecciones-municipales-en-lima-metropolitana-cuantos-distritos-y-que-zonas-apoyaron-a-los-alcaldes-ganadores-rafael-lopez-aliaga-carlos-bruce-francis-allison-onpe-jne-noticia/",
+      "titulo": "Juárez señala que el oficialismo buscará en el Senado sumar facultades para el Ejecutivo, pese a lo aprobado por diputados",
+      "resumen": "La senadora indicó que es necesario agregar facultades a lo aprobado por la Cámara de Diputados y que para ello habrá que llegar a consensos.",
+      "fuente": "RPP",
+      "url": "https://rpp.pe/politica/congreso/juarez-senala-que-el-oficialismo-buscara-en-el-senado-sumar-facultades-para-el-ejecutivo-pese-a-lo-aprobado-por-diputados-noticia-1711781",
       "fecha": "2026-10-09",
       "cat": "🇵🇪 Política peruana"
     }
